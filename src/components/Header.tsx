@@ -22,10 +22,10 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50">
+    <header className="fixed top-0 left-0 right-0 bg-black z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          <div className="text-xl font-bold text-black tracking-wider uppercase">
+          <div className="text-xl font-bold text-white tracking-wider uppercase">
             HARISH SAMALA
           </div>
 
@@ -35,7 +35,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                className="text-white hover:text-gray-300 transition-colors duration-200 font-medium"
               >
                 {item.name}
               </button>
@@ -44,7 +44,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-black"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -53,13 +53,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4 bg-white">
+          <div className="md:hidden pb-4 bg-black">
             <nav className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium text-left py-2"
+                  className="text-white hover:text-gray-300 transition-colors duration-200 font-medium text-left py-2"
                 >
                   {item.name}
                 </button>
