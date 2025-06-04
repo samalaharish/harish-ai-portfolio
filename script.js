@@ -1,4 +1,3 @@
-
 // GLOBAL VARIABLES AND DATA
 let isMobileMenuOpen = false;
 
