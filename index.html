@@ -1,32 +1,207 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>harish-ai-portfolio</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="harish-ai-portfolio" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harish Samala - Portfolio</title>
+    <meta name="description" content="Harish Samala - Data Analyst & Product Strategist Portfolio" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  </head>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER: Fixed navigation bar -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- BRANDING: Company/Personal name logo -->
+                <div class="logo">HARISH SAMALA</div>
+                
+                <!-- NAVIGATION: Desktop menu -->
+                <nav class="desktop-nav">
+                    <button onclick="scrollToSection('#about')">About</button>
+                    <button onclick="scrollToSection('#projects')">Projects</button>
+                    <button onclick="scrollToSection('#experience')">Experience</button>
+                    <button onclick="scrollToSection('#certifications')">Certifications</button>
+                    <button onclick="scrollToSection('#resume')">Resume</button>
+                    <button onclick="scrollToSection('#contact')">Contact</button>
+                </nav>
+                
+                <!-- MOBILE: Hamburger menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon hidden"></i>
+                </button>
+            </div>
+            
+            <!-- MOBILE NAVIGATION: Dropdown menu -->
+            <div id="mobile-nav" class="mobile-nav hidden">
+                <nav class="mobile-nav-content">
+                    <button onclick="scrollToSection('#about'); closeMobileMenu()">About</button>
+                    <button onclick="scrollToSection('#projects'); closeMobileMenu()">Projects</button>
+                    <button onclick="scrollToSection('#experience'); closeMobileMenu()">Experience</button>
+                    <button onclick="scrollToSection('#certifications'); closeMobileMenu()">Certifications</button>
+                    <button onclick="scrollToSection('#resume'); closeMobileMenu()">Resume</button>
+                    <button onclick="scrollToSection('#contact'); closeMobileMenu()">Contact</button>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- HERO: Main banner section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hello<br>
+                    <span class="hero-title-light">नमस्ते</span><br>
+                    <span class="hero-title-light">Bonjour</span><br>
+                    <span class="hero-title-light">Hallo!</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT: Personal information section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="placeholder-image">📊</div>
+                </div>
+                <div class="about-content">
+                    <h2>In a Nutshell</h2>
+                    <p class="about-description">
+                        From data dashboards to AI-powered product roadmaps, I help businesses grow with clarity, creativity, and calculated decisions — while identifying high-impact areas where AI can streamline operations, boost revenue, or unlock new value.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i data-lucide="bar-chart-3"></i>
+                            <span>Data Analytics</span>
+                        </div>
+                        <div class="skill-item">
+                            <i data-lucide="users"></i>
+                            <span>Product Strategy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i data-lucide="brain"></i>
+                            <span>AI Integration</span>
+                        </div>
+                        <div class="skill-item">
+                            <i data-lucide="trending-up"></i>
+                            <span>Business Growth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI TOOLS: Animated showcase -->
+    <section class="ai-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Favorite AI Tools</h2>
+                <p>Always exploring, building, and prompting. Passionate about the future of AI in product.</p>
+            </div>
+            <div class="tools-container">
+                <div class="tools-scroll" id="tools-scroll">
+                    <!-- Tools will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS: Portfolio showcase -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <p>Showcasing impactful initiatives across data analytics, product development, and AI automation</p>
+            </div>
+
+            <!-- DATA PROJECTS -->
+            <div class="project-category">
+                <h3>Data Projects</h3>
+                <div class="projects-grid" id="data-projects">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- PRODUCT CASES -->
+            <div class="project-category">
+                <h3>Product Cases</h3>
+                <div class="projects-grid" id="product-cases">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- AI AUTOMATIONS -->
+            <div class="project-category">
+                <h3>AI Automations and Projects</h3>
+                <div class="projects-grid" id="ai-automations">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="view-all-projects">
+                <button onclick="handleViewAllProjects()" class="view-all-btn">
+                    View all projects <span>→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT: Contact information -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new projects, product opportunities, or potential collaborations. Feel free to reach out through any of the channels below.</p>
+            </div>
+
+            <div class="contact-cards">
+                <a href="mailto:harishchintu6@gmail.com" class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>harishchintu6@gmail.com</p>
+                </a>
+
+                <a href="https://linkedin.com/in/harishsamala" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+            </div>
+
+            <div class="cta-section">
+                <h3>Let's Build Something Amazing!</h3>
+                <p>Ready to transform ideas into impactful products? I'd love to hear about your next challenge.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:harishchintu6@gmail.com" class="btn-primary">Send me an email</a>
+                    <a href="#" class="btn-secondary">Download Resume</a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Created with ❤️ using Lovable AI | © 2024 Harish Samala</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
