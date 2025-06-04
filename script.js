@@ -302,7 +302,7 @@ function openProject(driveLink, projectTitle) {
 
 function handleViewAllProjects() {
     // CUSTOMIZATION: Replace with your actual portfolio URL or GitHub projects page
-    const portfolioUrl = "https://github.com/your-username"; // Add your GitHub or portfolio link here
+    const portfolioUrl = "https://github.com/harishsamala"; // Add your GitHub or portfolio link here
     
     if (portfolioUrl && portfolioUrl !== "https://github.com/your-username") {
         window.open(portfolioUrl, '_blank');
@@ -310,4 +310,21 @@ function handleViewAllProjects() {
         console.log('Add your portfolio or GitHub link in handleViewAllProjects function');
         alert('Please add your portfolio or GitHub link in the code to view all projects');
     }
+}
+
+// RESUME DOWNLOAD FUNCTION
+function downloadResume() {
+    // CUSTOMIZATION: Replace with your actual resume file path or URL
+    const resumeUrl = "/path/to/your/resume.pdf"; // Add your resume file path here
+    
+    // For now, we'll show an alert. Replace this with actual download functionality
+    alert('Please add your resume file path in the downloadResume function to enable download');
+    
+    // Uncomment and modify the following lines when you have your resume file:
+    // const link = document.createElement('a');
+    // link.href = resumeUrl;
+    // link.download = 'Harish_Samala_Resume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
 }
