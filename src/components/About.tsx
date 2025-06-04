@@ -1,13 +1,19 @@
 
 import React from 'react';
 
+// ABOUT SECTION
+// CUSTOMIZATION: Update personal information, skills, and bio here
+// COLOR SCHEME: Uses black, grey, and white only - matching reference design
+
 const About = () => {
+  // CUSTOMIZATION: Add or modify technical skills here
   const technicalSkills = [
     "SQL", "Metabase", "Excel",
     "PowerPoint", "Docs", "Notion",
     "Apollo", "Hubspot", "Figma"
   ];
 
+  // CUSTOMIZATION: Add or modify soft skills here
   const softSkills = [
     "Problem Solving", "Communication",
     "Project Management", "Entrepreneurship"
@@ -17,7 +23,8 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Profile Image */}
+          {/* PROFILE IMAGE: Left side content */}
+          {/* CUSTOMIZATION: Replace emoji with actual profile image */}
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-8">About Me</h2>
             <div className="relative">
@@ -28,17 +35,20 @@ const About = () => {
               </div>
             </div>
 
+            {/* IN A NUTSHELL: Updated content section */}
+            {/* CUSTOMIZATION: Update personal summary here */}
             <div className="bg-white rounded-xl p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-black mb-3">
                 In a Nutshell
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                From dashboards to product roadmaps, I help businesses grow with clarity, creativity, and calculated decisions.
+                From data dashboards to AI-powered product roadmaps, I help businesses grow with clarity, creativity, and calculated decisions — while identifying high-impact areas where AI can streamline operations, boost revenue, or unlock new value.
               </p>
             </div>
           </div>
 
-          {/* Skills Content */}
+          {/* SKILLS CONTENT: Right side skills and experience */}
+          {/* STYLING: Maintains consistent spacing and typography */}
           <div className="space-y-12">
             <div>
               <div className="flex items-center mb-6">
@@ -49,6 +59,8 @@ const About = () => {
               </div>
 
               <div className="space-y-8">
+                {/* TECHNICAL SKILLS: Grid layout for tools */}
+                {/* CUSTOMIZATION: Modify technicalSkills array above to add/remove skills */}
                 <div>
                   <h4 className="text-lg font-medium text-black mb-4">Technical Skills</h4>
                   <div className="grid grid-cols-3 gap-4">
@@ -61,6 +73,8 @@ const About = () => {
                   </div>
                 </div>
 
+                {/* SOFT SKILLS: Grid layout for personal skills */}
+                {/* CUSTOMIZATION: Modify softSkills array above to add/remove skills */}
                 <div>
                   <h4 className="text-lg font-medium text-black mb-4">Soft Skills</h4>
                   <div className="grid grid-cols-2 gap-4">
@@ -75,7 +89,8 @@ const About = () => {
               </div>
             </div>
 
-            {/* Experience Section */}
+            {/* EXPERIENCE SECTION: Personal bio and background */}
+            {/* CUSTOMIZATION: Update personal description here */}
             <div>
               <div className="flex items-center mb-6">
                 <div className="w-6 h-6 bg-black rounded-sm flex items-center justify-center mr-3">
