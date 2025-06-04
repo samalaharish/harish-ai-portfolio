@@ -37,6 +37,34 @@ const Projects = () => {
       ],
       tags: ["Market Research", "Strategy", "Data Analysis"],
       driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "SQL Performance Analytics",
+      company: "Finance Corp",
+      description: "Database optimization reducing query time by 60%",
+      image: "🗄️",
+      highlights: [
+        "Optimized complex SQL queries",
+        "Reduced processing time by 60%",
+        "Automated reporting workflows",
+        "Improved data accuracy by 95%"
+      ],
+      tags: ["SQL", "Database", "Performance"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "Excel Advanced Analytics",
+      company: "Retail Analytics",
+      description: "Advanced Excel models for sales forecasting and trend analysis",
+      image: "📋",
+      highlights: [
+        "Built predictive sales models",
+        "Created interactive dashboards",
+        "Automated monthly reports",
+        "Increased forecast accuracy by 85%"
+      ],
+      tags: ["Excel", "Forecasting", "Analytics"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
     }
   ];
 
@@ -56,6 +84,48 @@ const Projects = () => {
       ],
       tags: ["Product Design", "User Research", "A/B Testing"],
       driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "Mobile App UX Redesign",
+      company: "FinTech Startup",
+      description: "Complete mobile app redesign improving user retention by 120%",
+      image: "📱",
+      highlights: [
+        "Redesigned entire user journey",
+        "Improved user retention by 120%",
+        "Reduced app abandonment rate",
+        "Enhanced accessibility features"
+      ],
+      tags: ["Mobile UX", "Product Strategy", "User Testing"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "E-commerce Platform Optimization",
+      company: "Online Retail",
+      description: "Product page optimization leading to 45% increase in conversions",
+      image: "🎯",
+      highlights: [
+        "Optimized product page layouts",
+        "Implemented A/B testing framework",
+        "Increased conversions by 45%",
+        "Reduced cart abandonment by 30%"
+      ],
+      tags: ["E-commerce", "Conversion Optimization", "UX"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "SaaS Dashboard Redesign",
+      company: "B2B Software",
+      description: "Dashboard redesign improving user satisfaction and reducing support tickets",
+      image: "💼",
+      highlights: [
+        "Redesigned complex dashboard interface",
+        "Improved user satisfaction scores",
+        "Reduced support tickets by 50%",
+        "Enhanced data visualization"
+      ],
+      tags: ["SaaS", "Dashboard Design", "User Experience"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
     }
   ];
 
@@ -74,6 +144,48 @@ const Projects = () => {
         "Improved customer satisfaction scores"
       ],
       tags: ["AI", "Automation", "Customer Support"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "Document Processing AI",
+      company: "Legal Tech",
+      description: "AI-powered document analysis reducing manual work by 80%",
+      image: "📄",
+      highlights: [
+        "Automated document classification",
+        "Extracted key information using NLP",
+        "Reduced manual processing by 80%",
+        "Improved accuracy to 98%"
+      ],
+      tags: ["NLP", "Document AI", "Automation"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "Predictive Analytics Model",
+      company: "Healthcare Analytics",
+      description: "Machine learning model predicting patient outcomes with 92% accuracy",
+      image: "🔬",
+      highlights: [
+        "Developed ML prediction models",
+        "Achieved 92% prediction accuracy",
+        "Integrated with hospital systems",
+        "Improved patient care decisions"
+      ],
+      tags: ["Machine Learning", "Healthcare", "Predictive Analytics"],
+      driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
+    },
+    {
+      title: "Smart Content Generator",
+      company: "Marketing Agency",
+      description: "AI tool generating personalized content increasing engagement by 150%",
+      image: "✨",
+      highlights: [
+        "Created AI content generation tool",
+        "Personalized content for audiences",
+        "Increased engagement by 150%",
+        "Reduced content creation time by 70%"
+      ],
+      tags: ["AI Content", "Personalization", "Marketing Tech"],
       driveLink: "ADD_YOUR_DRIVE_LINK_HERE" // CUSTOMIZATION: Replace with actual Google Drive link
     }
   ];
@@ -128,6 +240,7 @@ const Projects = () => {
               window.open(project.driveLink, '_blank');
             } else {
               console.log('Add your drive link for:', project.title);
+              alert('Please add your drive link for this project in the code');
             }
           }}
           className="w-full bg-gray-100 hover:bg-gray-800 hover:text-white text-gray-700 py-2 px-4 rounded-lg transition-colors duration-200 font-medium text-sm"
@@ -137,6 +250,20 @@ const Projects = () => {
       </div>
     </div>
   );
+
+  // HANDLE VIEW ALL PROJECTS: Function to handle "View all projects" button
+  // CUSTOMIZATION: Add your portfolio website or GitHub link here
+  const handleViewAllProjects = () => {
+    // CUSTOMIZATION: Replace with your actual portfolio URL or GitHub projects page
+    const portfolioUrl = "https://github.com/your-username"; // Add your GitHub or portfolio link here
+    
+    if (portfolioUrl && portfolioUrl !== "https://github.com/your-username") {
+      window.open(portfolioUrl, '_blank');
+    } else {
+      console.log('Add your portfolio or GitHub link in handleViewAllProjects function');
+      alert('Please add your portfolio or GitHub link in the code to view all projects');
+    }
+  };
 
   return (
     <section id="projects" className="py-20 bg-white">
@@ -153,7 +280,7 @@ const Projects = () => {
         {/* CUSTOMIZATION: Modify dataProjects array above to add/remove projects */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Data Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {dataProjects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
@@ -164,7 +291,7 @@ const Projects = () => {
         {/* CUSTOMIZATION: Modify productCases array above to add/remove projects */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Product Cases</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {productCases.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
@@ -175,7 +302,7 @@ const Projects = () => {
         {/* CUSTOMIZATION: Modify aiAutomations array above to add/remove projects */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">AI Automations and Projects</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {aiAutomations.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
@@ -183,9 +310,12 @@ const Projects = () => {
         </div>
 
         {/* VIEW ALL PROJECTS LINK */}
-        {/* CUSTOMIZATION: Add link to portfolio or project gallery */}
+        {/* CUSTOMIZATION: The button now works - add your portfolio/GitHub link in handleViewAllProjects function */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center text-gray-600 hover:text-gray-700 font-medium">
+          <button 
+            onClick={handleViewAllProjects}
+            className="inline-flex items-center text-gray-600 hover:text-gray-700 font-medium hover:underline transition-all duration-200"
+          >
             View all projects
             <span className="ml-2">→</span>
           </button>
