@@ -7,6 +7,7 @@ import AITools from '../components/AITools';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import AIProjectWebsites from '@/components/AIProjectWebsites';
 
 // MAIN PAGE STRUCTURE
 // This is the main landing page that combines all sections
@@ -23,16 +24,20 @@ const Index = () => {
       
       {/* ABOUT: Personal information and skills */}
       <About />
+
+      <Experience />
       
       {/* AI TOOLS: Animated showcase of favorite AI tools */}
       {/* NOTE: Only one AI Tools section - removed duplicate */}
       <AITools />
       
       {/* EXPERIENCE: Work history and achievements */}
-      <Experience />
+      
       
       {/* PROJECTS: Portfolio showcase */}
       <Projects />
+
+      <AIProjectWebsites/>
       
       {/* CONTACT: Contact information and form */}
       <Contact />
