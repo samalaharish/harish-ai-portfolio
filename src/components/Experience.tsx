@@ -1,7 +1,22 @@
-
 import React from 'react';
+import { Briefcase, GraduationCap, Star } from 'lucide-react';
+import Lovable from '/lovable.jpg';
+import Claude from '/claude.png';
+import n8n from '/n8n.png';
+import Perplexity from '/Perplexity.png';
+import Chatgpt from '/ChatGPT.jpg';
+import Windframe from '/windframe.png';
 
 const Experience = () => {
+  const aiTools = [
+    { name: 'Claude', logo: Claude },
+    { name: 'Perplexity', logo: Perplexity },
+    { name: 'n8n', logo: n8n },
+    { name: 'Lovable', logo: Lovable },
+    { name: 'ChatGPT', logo: Chatgpt },
+    { name: 'Windframe', logo: Windframe }
+  ];
+
   const experiences = [
     {
       title: "Product Manager Intern",
@@ -16,10 +31,10 @@ const Experience = () => {
       ]
     },
     {
-      title: "Product Analyst & Digital Analyst",
+      title: "Product Analyst",
       company: "Ace Creations",
       location: "India",
-      period: "2023 - 2024",
+      period: "2021-2022",
       description: "Conducted A/B testing, packaging insights, and customer analytics to drive product improvements and user engagement.",
       highlights: [
         "Executed A/B tests resulting in 25% conversion improvement",
@@ -28,15 +43,15 @@ const Experience = () => {
       ]
     },
     {
-      title: "Strategy Consultant",
-      company: "P&G & Cdiscount Projects (via EDHEC)",
-      location: "France",
-      period: "2023",
-      description: "Developed market entry strategies and ROI-driven execution plans for major retail and FMCG clients.",
+      title: "Digital Analyst",
+      company: "Mediamint",
+      location: "Hyderabad, India",
+      period: "Sep 2021 – Dec 2021",
+      description: "Revamped digital advertising strategies using Google Ad Manager, leading to improved campaign performance. Conducted A/B testing to enhance ad creatives and audience segmentation, delivering measurable ROI growth.",
       highlights: [
-        "Achieved 15% sales boost through data segmentation",
-        "Designed go-to-market strategy for new product lines",
-        "Conducted comprehensive market research and competitive analysis"
+        "Increased click-through rate (CTR) by 25% and conversion rates by 15% through optimized ad campaigns",
+        "Conducted targeted A/B testing, resulting in a 10% boost in ROI",
+        "Translated customer behavior data into actionable insights for better audience targeting and engagement"
       ]
     }
   ];
@@ -53,6 +68,12 @@ const Experience = () => {
       school: "EDHEC Business School",
       location: "Nice, France",
       period: "2022 - 2024"
+    },
+    {
+      degree: "Bachelor of Technology (Mech)",
+      school: "Vignana Bharathi Institute of Technology",
+      location: "Hyderabad, India",
+      period: "2018 - 2021"
     }
   ];
 
@@ -67,28 +88,27 @@ const Experience = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Professional Experience */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-8 flex items-center">
-              <span className="mr-3">💼</span>
+              <Briefcase className="mr-3 h-6 w-6" />
               Professional Experience
             </h3>
             <div className="space-y-8">
               {experiences.map((exp, index) => (
-                <div key={index} className="relative pl-8 border-l-2 border-blue-200">
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                <div key={index} className="relative pl-8 border-l-2 border-gray-200">
+                  <div className="absolute -left-2 top-0 w-4 h-4 bg-gray-600 rounded-full"></div>
                   <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-xl font-semibold text-gray-900">{exp.title}</h4>
-                      <span className="text-sm text-blue-600 font-medium">{exp.period}</span>
+                      <span className="text-sm text-gray-600 font-medium">{exp.period}</span>
                     </div>
-                    <div className="text-lg text-blue-600 font-medium mb-2">{exp.company}</div>
+                    <div className="text-lg text-gray-600 font-medium mb-2">{exp.company}</div>
                     <div className="text-sm text-gray-500 mb-4">{exp.location}</div>
                     <p className="text-gray-600 mb-4">{exp.description}</p>
                     <ul className="space-y-2">
                       {exp.highlights.map((highlight, idx) => (
                         <li key={idx} className="text-sm text-gray-600 flex items-start">
-                          <span className="text-blue-500 mr-2 mt-1">•</span>
+                          <span className="text-gray-500 mr-2 mt-1">•</span>
                           {highlight}
                         </li>
                       ))}
@@ -99,10 +119,9 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Education */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-8 flex items-center">
-              <span className="mr-3">🎓</span>
+              <GraduationCap className="mr-3 h-6 w-6" />
               Education
             </h3>
             <div className="space-y-6">
@@ -110,29 +129,36 @@ const Experience = () => {
                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                     <h4 className="text-xl font-semibold text-gray-900">{edu.degree}</h4>
-                    <span className="text-sm text-blue-600 font-medium">{edu.period}</span>
+                    <span className="text-sm text-gray-600 font-medium">{edu.period}</span>
                   </div>
-                  <div className="text-lg text-blue-600 font-medium">{edu.school}</div>
+                  <div className="text-lg text-gray-600 font-medium">{edu.school}</div>
                   <div className="text-sm text-gray-500">{edu.location}</div>
                 </div>
               ))}
             </div>
 
-            {/* AI Tools Section */}
             <div className="mt-12">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-                <span className="mr-3">🤖</span>
+                <Star className="mr-3 h-6 w-6" />
                 My Favorite AI Tools
               </h3>
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6">
                 <p className="text-gray-600 mb-4 italic">
-                  "Always exploring, building, and prompting. Passionate about the future of AI in product."
+                  Always exploring, building, and prompting. Passionate about the future of AI in product.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {["ChatGPT", "Claude", "Midjourney", "Copilot", "Bard", "Perplexity"].map((tool) => (
-                    <div key={tool} className="bg-white rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-shadow duration-200">
-                      <div className="text-2xl mb-2">🤖</div>
-                      <div className="text-sm font-medium text-gray-700">{tool}</div>
+                  {aiTools.map((tool) => (
+                    <div
+                      key={tool.name}
+                      className="bg-white rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
+                      <img
+                        src={tool.logo}
+                        alt={`${tool.name} logo`}
+                        loading="lazy"
+                        className="w-8 h-8 object-contain mx-auto mb-2"
+                      />
+                      <div className="text-sm font-medium text-gray-700">{tool.name}</div>
                     </div>
                   ))}
                 </div>

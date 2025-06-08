@@ -1,5 +1,26 @@
-
 import React from 'react';
+import Lovable from '/lovable.jpg';
+import Claude from '/claude.png';
+import Chatgpt from '/ChatGPT.jpg';
+import Chatprd from '/chatprd.jpg';
+import Gamma from '/Gamma_Ai.webp';
+import Gemini from '/gemini.png';
+import Manus from '/manus.jpeg';
+import Copilot from '/copilot.webp';
+import n8n from '/n8n.png';
+import Perplexity from '/Perplexity.png';
+import Visily from '/visily.jpg';
+import Windframe from '/windframe.png';
+import AppBot from '/appbot.png';
+import FireBase from '/firebase.png';
+import FormulaBot from '/formula-bot.jpeg';
+import Hailuo from '/hailuo.png';
+import NoteBookLm from '/notebooklm.png';
+import RelevanceAi from '/relevanceai.jpeg';
+import Runway from '/runway.png';
+import DeepSeek from '/deepseek.webp';
+import Zapier from '/zapier.jpg';
+
 
 // AI TOOLS SECTION
 // CUSTOMIZATION: Add or remove AI tools by modifying the aiTools array
@@ -7,17 +28,30 @@ import React from 'react';
 // STYLING: Black, grey, and white color scheme
 
 const AITools = () => {
-  // TOOL LIST: Define AI tools to display
+  // TOOL LIST: Define AI tools with imported images
   // CUSTOMIZATION: Add new tools or update existing ones here
   const aiTools = [
-    { name: 'ChatGPT', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-    { name: 'Claude', logo: 'https://claude.ai/images/claude_app_icon.png' },
-    { name: 'GitHub Copilot', logo: 'https://github.githubassets.com/images/modules/site/copilot/copilot-logo.png' },
-    { name: 'Microsoft Copilot', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Microsoft_Office_logo_%282019%E2%80%93present%29.svg' },
-    { name: 'Midjourney', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg' },
-    { name: 'Perplexity', logo: 'https://yt3.googleusercontent.com/yJ5h6vJ-hEz3gGh3iy0zyKxJ_-1q5z5Z5J4-r3J4-r3J4-r3J4-r3J4-r3J4-r3J4-r3J4=s900-c-k-c0x00ffffff-no-rj' },
-    { name: 'HuggingFace', logo: 'https://huggingface.co/front/assets/huggingface_logo-noborder.svg' },
-    { name: 'Bard', logo: 'https://www.gstatic.com/lamda/images/favicon_v1_150160cddceea7f3.svg' }
+    { name: 'Lovable', logo: Lovable },
+    { name: 'Claude', logo: Claude },
+    { name: 'ChatGPT', logo: Chatgpt },
+    { name: 'ChatPRD', logo: Chatprd },
+    { name: 'Gamma', logo: Gamma },
+    { name: 'Gemini', logo: Gemini },
+    { name: 'Manus', logo: Manus },
+    { name: 'Copilot', logo: Copilot },
+    { name: 'n8n', logo: n8n },
+    { name: 'Perplexity', logo: Perplexity },
+    { name: 'Visily', logo: Visily },
+    { name: 'Windframe', logo: Windframe },
+    { name: 'AppBot', logo: AppBot },
+    { name: 'Firebase', logo: FireBase },
+    { name: 'Formula Bot', logo: FormulaBot },
+    { name: 'Hailuo', logo: Hailuo },
+    { name: 'NoteBookLM', logo: NoteBookLm },
+    { name: 'Relevance AI', logo: RelevanceAi },
+    { name: 'Runway', logo: Runway },
+    { name: 'DeepSeek', logo: DeepSeek },
+    { name: 'Zapier', logo: Zapier },
   ];
 
   // ANIMATION: Duplicate array for seamless infinite scroll
@@ -31,9 +65,9 @@ const AITools = () => {
         {/* SECTION HEADER: Title and description */}
         {/* CUSTOMIZATION: Update title and description text here */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-black mb-4">My Favorite AI Tools</h2>
+          <h2 className="text-3xl font-bold text-black mb-4">AI Tools I Rely On</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Always exploring, building, and prompting. Passionate about the future of AI in product.
+            From copilots to creative engines, these tools help me build smarter, faster, and better.
           </p>
         </div>
 
@@ -48,11 +82,12 @@ const AITools = () => {
                 key={`${tool.name}-${index}`}
                 className="flex-shrink-0 flex flex-col items-center justify-center w-32 h-32 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300 group"
               >
-                {/* ICON PLACEHOLDER: Robot emoji as fallback */}
-                {/* CUSTOMIZATION: Replace with actual tool logos */}
-                <div className="w-12 h-12 bg-gray-200 rounded-lg mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🤖</span>
-                </div>
+                <img
+                  src={tool.logo}
+                  alt={`${tool.name} logo`}
+                  loading="lazy"
+                  className="w-12 h-12 object-contain rounded-lg mb-3 group-hover:scale-110 transition-transform duration-300"
+                />
                 
                 {/* TOOL NAME: Text label */}
                 <span className="text-sm font-medium text-gray-700 text-center px-2">
